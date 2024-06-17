@@ -1,6 +1,6 @@
 # Homework with iptables basics
 
-[Whole process in one picture](./assets/whole-process.png)
+[Whole process in one picture](./assets/whole-process.png) - as **proof of correct timeline and command order**
 
 ## 1. no rule, ping works
 
