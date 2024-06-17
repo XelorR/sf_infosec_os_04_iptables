@@ -1,27 +1,23 @@
 # Homework with iptables basics
 
-## Rule
+[Whole process in one picture](./assets/whole-process.png)
+
+## 1. no rule, ping works
+
+![](./assets/01_no-rule.png)
+
+## 2. rule enabled, ping fails
 
 ```bash
 sudo iptables -A INPUT -p icmp -j REJECT
 ```
 
-rule screenshot here
+![](./assets/02_rule-enabled_ping-failed.png)
 
-## Fail
-
-ping fail after rule restriction here
-
-## Revert
+## 3. rule deleted, ping works again
 
 ```bash
-sudo iptables -L
+sudo iptables -D INPUT 1
 ```
 
-screenshot with rules here
-
-```bash
-sudo iptables -D INPUT 2
-```
-
-reverting to initial config and screenshot with ping working here
+![](./assets/03_rule-removed-ping-works.png)
